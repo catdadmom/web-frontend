@@ -1,0 +1,16 @@
+{
+  "name": "catdadmom",
+  "version": "0.0.0",
+  "authors": [
+    "J2P <jjp5023@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
