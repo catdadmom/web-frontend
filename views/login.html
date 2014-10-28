@@ -1,0 +1,17 @@
+{% extends 'form_base.html' %}
+
+{% block title %}
+    로그인
+{% endblock %}
+
+{% block formtitle %}캣댓맘 로그인!{% endblock %}
+{% block form %}
+    <form action="{{ url_for('user.login') }}" method="POST" role="form">
+        <input type="text" class="login-control" id="login" name="login" placeholder="아이디">
+        <input type="password" class="login-control" id="password" name="password" placeholder="패스워드">
+        <div>
+            <button type="submit" class="btn btn-primary">로그인</button>
+            <a href="{{ url_for('user.signup_form') }}" class="btn btn-primary">회원가입</a>
+        </div>
+    </form>
+{% endblock %}
