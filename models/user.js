@@ -15,8 +15,17 @@ module.exports = function (sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    admin: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
   }, {
+    classMethods: {
+      associate: function (models) {
+        User.hasMany(models.Cat, {through: 'users_carefor_cats'});
+      }
+    },
     instanceMethods: {
       setPassword: function (password, done) {
         return bcrypt.genSalt(10, function (err) {
